@@ -1,5 +1,6 @@
 import React from "react";
 import cardInfo from "../cards.json";
+import "../styles.css"
 
 class Game extends React.Component {
   state = {
@@ -84,6 +85,9 @@ class Game extends React.Component {
                 //where does key come from?
                 <div className="col-12 col-sm-6 col-md-3" key={card.id}>
                   <div className = "hovereffect">
+                    <div className = "overlay">
+                    <h2>{card.name}</h2>
+                    </div>
                   <img
                     src={card.image}
                     alt={card.name}

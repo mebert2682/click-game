@@ -51,7 +51,7 @@
   position: relative;
   font-size: 17px;
   background-color: transparent;
-  color: #FFF;
+  color: rgb(233, 13, 13);
   padding: 1em 0;
   opacity: 0;
   filter: alpha(opacity=0);
