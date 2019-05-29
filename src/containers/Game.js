@@ -66,34 +66,35 @@ class Game extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-dark bg-dark d-flex justify-space-between">
+        <nav className="navbar fixed-top navbar-dark bg-dark d-flex justify-space-between">
           <span className="navbar-brand mb-0">The Rap Game</span>
-          <br></br>
           <span className="scoreInfo text-light">
             Current Score: {this.state.userScore} || Top Score: {this.state.topScore}
           </span>
         </nav>
-        <div className="jumbotron jumbotron-fluid bg-warning text-dark text-center">
-          <h1>Welcome to the Rap Game!</h1>
-          <p>Click on a rapper to get started. Don't click on the same rapper twice.</p>
+        <div className="jumbotron jumbotron-fluid bg-warning text-dark text-center hero">
+
         </div>
         <div className="container-fluid">
+
+          <h1>Welcome to the Rap Game!</h1>
+          <p>Click on a rapper to get started. Don't click on the same rapper twice.</p>
           <div className="row align-items-center">
-            
+
             {this.state.cardInfo.map(card => {
               return (
                 //where does key come from?
                 <div className="col-12 col-sm-6 col-md-3" key={card.id}>
-                  <div className = "hovereffect">
-                    <div className = "overlay">
-                    <h2>{card.name}</h2>
+                  <div className="hovereffect">
+                    <div className="overlay">
+                      <h2>{card.name}</h2>
                     </div>
-                  <img
-                    src={card.image}
-                    alt={card.name}
-                    className="img-fluid img-thumbnail rounded"
-                    onClick={() => this.handleCardsClicked(card.id)}
-                  />
+                    <img
+                      src={card.image}
+                      alt={card.name}
+                      className="img-fluid img-thumbnail rounded"
+                      onClick={() => this.handleCardsClicked(card.id)}
+                    />
                   </div>
                 </div>
               );
@@ -101,7 +102,7 @@ class Game extends React.Component {
           </div>
         </div>
       </div>
-    
+
     );
   }
 }
